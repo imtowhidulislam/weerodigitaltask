@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* !! Navbar List Start */
+.navContainer{
+  width : 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.nav > *{
+  margin-left: 1rem;
+}
+.link{
+  @apply cursor-pointer text-gray-700 font-bold hover:text-gray-100 transition-all duration-200 ease-in-out;
+}
+/* !! Navbar List End */
+
+/* ?? Footer Style Start */
+
+  .footerStyle{
+    @apply capitalize text-base font-bold text-left
+  }
+  .footerStyle > *:nth-child(1){
+    margin-bottom: .5rem;
+    color: #adafb1;
+  }
+/* ?? Footer Style End */
