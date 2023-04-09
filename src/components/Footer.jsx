@@ -1,6 +1,7 @@
 import React from 'react'
 import {FaFacebookSquare,FaInstagramSquare,FaTwitterSquare,FaLinkedin} from "react-icons/fa"
 import {GiMagicLamp} from "react-icons/gi"
+import { FaCopyright } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -43,8 +44,10 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-        <div className='mt-12 capitalize text-gray-300'>
-            <p>copyright <span>2023. </span>all rights reserve to weero Digital</p>
+        <div className='mt-12 capitalize text-gray-300 flex items-center justify-center gap-1'>
+                <FaCopyright />
+            <p className=''>
+                copyright <span>2023. </span>all rights reserve to weero Digital</p>
         </div>
     </div>
   )
