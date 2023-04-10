@@ -9,29 +9,29 @@ const Reward = () => {
         <div className="py-20">
             <h2 className='text-6xl font-bold text-center mb-8 capitalize'>brave challenge</h2>
             <p className='text-sm font-semibold uppercase mb-10'>join us and get your rewards!</p>
-            <div className='grid grid-cols-collectionLayout gap-4'>
-                <div className='bg-[#2222] rounded-md p-4 '>
+            <div className='grid grid-cols-collectionLayout gap-4 '>
+                <div className='bg-[#2222] hover:skew-x-6 transition-all duration-200 ease-in-out cursor-pointer rounded-md p-4 '>
                     <div className=' text-5xl text-sky-700'>
                         <BsFillClipboard2MinusFill/>
                 </div>
                     <h2 className='text-left  mt-4 text-2xl font-bold text-gray-800'>Electronics</h2>
                     <p className='text-sm mt-4 text-left'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quam numquam a. Corrupti, nisi veritatis?</p>
                 </div>
-                <div className='bg-[#2222] rounded-md p-4 '>
+                <div className='bg-[#2222] hover:skew-x-6 transition-all duration-200 ease-in-out cursor-pointer rounded-md p-4 '>
                     <div className=' text-5xl text-sky-700'>
                         <BsFillClipboard2CheckFill />
                     </div>
                     <h2 className='text-left  mt-4 text-2xl font-bold text-gray-800'>Men's Clothing</h2>
                     <p className='text-sm mt-4 text-left'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quam numquam a. Corrupti, nisi veritatis?</p>
                 </div>
-                <div className='bg-[#2222] rounded-md p-4 '>
+                <div className='bg-[#2222] hover:skew-x-6 transition-all duration-200 ease-in-out cursor-pointer rounded-md p-4 '>
                     <div className=' text-5xl text-sky-700'>
                         <FaCrown />
                     </div>
                     <h2 className='text-left  mt-4 text-2xl font-bold text-gray-800'>Women's Clothing</h2>
                     <p className='text-sm mt-4 text-left'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quam numquam a. Corrupti, nisi veritatis?</p>
                 </div>
-                <div className='bg-[#a14bdfcc] rounded-md p-4 '>
+                <div className='bg-[#a14bdfcc] hover:skew-y-6 transition-all duration-200 ease-in-out cursor-pointer  rounded-md p-4 '>
                     <div className=' text-5xl text-sky-700'>
                         <RiChatSmile2Line />
                     </div>
