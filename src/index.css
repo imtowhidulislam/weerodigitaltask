@@ -26,3 +26,12 @@
     color: #adafb1;
   }
 /* ?? Footer Style End */
+
+/* !! Unique Btn Style Start */
+  .btn_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem
+  }
+/* !! Unique Btn Style End */
