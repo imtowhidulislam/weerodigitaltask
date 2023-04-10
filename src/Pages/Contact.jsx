@@ -33,7 +33,7 @@ const Contact = () => {
 
 
     return (
-    <div className='contact px-16 py-24' >
+    <div className='contact px-2 md:px-16 py-24' >
       <div>
       </div>
       <div className='container flex items-center justify-center '>

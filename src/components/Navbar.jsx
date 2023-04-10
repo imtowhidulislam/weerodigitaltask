@@ -9,7 +9,7 @@ const Navbar = () => {
             <div className='text-5xl text-gray-50'>
                 <GiMagicLamp />
             </div>
-            <nav className="list-none flex items-center nav">
+            <nav className="list-none flex items-center navbar">
                 <li >
                     <Link className='link' to="/">
                         Home
