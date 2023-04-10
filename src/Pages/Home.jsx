@@ -2,6 +2,7 @@ import React from 'react'
 import ShoppingImage from "../assets/shopping.svg";
 import Slider from '../components/Slider';
 import Collection from '../components/Collection';
+import Reward from '../components/Reward';
 
 const Home = () => {
   return (
@@ -21,7 +22,9 @@ const Home = () => {
         <div>
           <Collection />
         </div>
-        <div></div>
+        <div>
+          <Reward />
+        </div>
       </div>
     </div>
   )
