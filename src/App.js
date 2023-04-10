@@ -6,13 +6,15 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="booking" element={<Booking />} />
-        <Route path="product" element={<Product />} />
-      </Routes>
+        <div className='' >
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="booking" element={<Booking />} />
+            <Route path="product" element={<Product />} />
+          </Routes>
+        </div>
       <Footer />
     </div>
   );

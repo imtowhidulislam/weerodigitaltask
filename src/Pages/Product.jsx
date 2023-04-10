@@ -6,6 +6,29 @@ const Product = () => {
     const [button, setButton] = useState([]);
     const [filterProduct , setFilterProduct] = useState("All");
     const [filterProductData, setFilterProductData] = useState([]);
+        // !! Fetching the Unique Category>>>
+        const handleClick = e => {
+            setFilterProduct(e.target.dataset.name);
+        }
+        
+        const fetchCat = () => {
+            let unique = product.map(but => but.category);
+            unique = [...new Set(unique)]
+            setButton(unique);
+        }
+        useEffect(() => {
+            fetchCat();
+        },[fetchCat])
+        
+        const filterCategory = () => {
+            const fetchFilterProduct =  product.filter(cat => {
+                return cat.category === filterProduct;
+            })
+            return setFilterProductData(fetchFilterProduct);
+        }
+        useEffect(() => {
+            filterCategory();
+        },[filterProductData])    
 
     const getProduct = async (url) => {
         const res = await fetch(url);
@@ -22,51 +45,25 @@ const Product = () => {
         getProduct(fakeApi);
     },[])
 
-    // !! Fetching the Unique Category>>>
-    const handleClick = e => {
-        setFilterProduct(e.target.dataset.name);
-    }
-    useEffect(() => {
-        console.log(filterProduct);
-    },[filterProduct])
-
-    const fetchCat = () => {
-        let unique = product.map(but => but.category);
-        unique = [...new Set(unique)]
-        setButton(unique);
-    }
-    useEffect(() => {
-        fetchCat();
-    },[fetchCat])
-    
-    
-    const filterCategory = () => {
-        const fetchFilterProduct =  product.filter(cat => {
-            return cat.category === filterProduct;
-        })
-        return setFilterProductData(fetchFilterProduct);
-    }
-    useEffect(() => {
-        filterCategory();
-        console.log(filterProductData);
-    },[filterProductData])
 
   return (
-    <div>
+    <div className='container py-20 px-8'>
         <div className='btn_container'>
-            <button className='capitalize text-base font-bold px-8 py-4 rounded-md cursor-pointer bg-sky-400 text-gray-700 hover:bg-sky-600 hover:text-gray-200 transition-all duration-200 ease-in-out' onClick={handleClick} data-name="All">All</button>
-            {
-                button.map(btns => {
-                    return (
-                        <>
-                            <button className='capitalize text-base font-bold px-8 py-4 rounded-md cursor-pointer bg-sky-400 text-gray-700 hover:bg-sky-600 hover:text-gray-200 transition-all duration-200 ease-in-out' onClick={handleClick} data-name={btns}>{btns}</button>
-                        </>
-                    )
-                })
-            }
+        <button className='btn' onClick={handleClick} data-name="All">All</button>
+            <div className='flex items-center justify-center flex-wrap gap-2'>
+                {
+                    button.map(btns => {
+                        return (
+                            <>
+                            
+                                <button className='btn' onClick={handleClick} data-name={btns}>{btns}</button>
+                            </>
+                        )
+                    })
+                }
+            </div>
         </div>
-        
-        <div className='grid grid-cols-productLayout gap-4'>
+        <div className='grid grid-cols-productLayout gap-4 mt-10'>
             {   filterProduct === "All" ? (
                 product.map(singleProduct => {
                     const {id,title, description: desc,image:img,price,rating,category:cat} = singleProduct;

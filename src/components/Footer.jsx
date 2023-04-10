@@ -6,6 +6,7 @@ import { FaCopyright } from 'react-icons/fa'
 const Footer = () => {
   return (
     <div className='bg-blue-700 px-4 py-8'>
+        <div className='container'>
         <div className='text-6xl flex items-center justify-center mb-10 text-gray-100'>
             <GiMagicLamp />
         </div>
@@ -48,6 +49,7 @@ const Footer = () => {
                 <FaCopyright />
             <p className=''>
                 copyright <span>2023. </span>all rights reserve to weero Digital</p>
+        </div>
         </div>
     </div>
   )
